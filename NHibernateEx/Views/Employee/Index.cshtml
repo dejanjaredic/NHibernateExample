@@ -1,0 +1,43 @@
+﻿@model List<NHibernateEx.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    @foreach (var emp in Model)
+    {
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => emp.FirstName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => emp.FirstName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => emp.LastName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => emp.LastName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => emp.Designation)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => emp.Designation)
+            </dd>
+
+        </dl>
+    }
+    
+</div>
+
